@@ -19,14 +19,15 @@ function mostrarDatosUsuario(usuario) {
     nombreCompleto.textContent = usuario.name.title + ' ' + usuario.name.first + ' ' + usuario.name.last;
 
     const genero = document.getElementById('genero');
-    genero.textContent = 'Género: ' + usuario.gender;
+    const esMasculino = usuario.gender === 'male';
+    const textoGenero = esMasculino ? 'Género: Masculino' : 'Género: Femenino';
+    genero.textContent = textoGenero;
 
     const edad = document.getElementById('edad');
     edad.textContent = 'Edad: ' + usuario.dob.age;
 
     const fechaNacimiento = document.getElementById('fecha-nacimiento');
     fechaNacimiento.textContent = 'Fecha de nacimiento: ' + new Date(usuario.dob.date).toLocaleDateString();
-
 
     function obtenerNombrePais(abreviatura) {
         const paises = {
