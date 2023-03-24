@@ -47,7 +47,11 @@ function mostrarDatosUsuario(usuario) {
           NL: 'Países Bajos',
           NZ: 'Nueva Zelanda',
           TR: 'Turquía',
-          US: 'Estados Unidos'
+          US: 'Estados Unidos',
+          IN: 'India',
+          MX: 'Mexico',
+          RS: 'Serbia',
+          AU: 'Australia'
         };
       
         return paises[abreviatura] || abreviatura;
@@ -59,16 +63,18 @@ function mostrarDatosUsuario(usuario) {
     const correoElectronico = document.getElementById('correo-electronico');
     correoElectronico.textContent = 'Correo electrónico: ' + usuario.email;
 
+    const telefono = document.getElementById('telefono');
+    telefono.textContent = 'Teléfono: ' + usuario.phone
+
 //No me agarro la experiencia laboral y los estudios realizados
 
-    const experienciaLaboral = document.getElementById('experiencia-laboral');
-    usuario.location.street.name
-    usuario.location.street.number
-    usuario.experience.forEach(exp => {
-        const li = document.createElement('li');
-        li.textContent = exp.title + ' en ' + exp.company;
-        experienciaLaboral.appendChild(li);
+   const experienciaLaboral = document.getElementById('experiencia-laboral');
+   usuario.experience.forEach(exp => {
+    const li = document.createElement('li');
+    li.textContent = exp.title + ' en ' + exp.company;
+    experienciaLaboral.appendChild(li);
     });
+      
     const estudiosRealizados = document.getElementById('estudios-realizados');
     usuario.education.forEach(edu => {
     const li = document.createElement('li');
