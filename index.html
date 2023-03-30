@@ -26,8 +26,8 @@
         </header>
             <main>
                 <div class="title">
-                  <h2 onclick="toggleContent()"> ▶ Datos Personales</h2>
-                  <div class="content" id="content">
+                  <h2 class="content" onclick="toggleContent('datos-personales')"> ▶ Datos Personales</h2>
+                  <div id="datos-personales">
                     <p> » Género: <span id="genero"></span></p>
                     <p> » Edad: <span id="edad"></span></p>
                     <p> » Fecha de nacimiento: <span id="fecha-nacimiento"></span></p>
@@ -39,8 +39,8 @@
                   </div>
                 </div>
                 <div class="title">
-                  <h2 onclick="toggleContent()" id="experiencia-laboral"> ▶ Experiencia Laboral</h2>
-                  <div class="content">
+                  <h2 class="content" onclick="toggleContent('experiencia-laboral')"> ▶ Experiencia Laboral</h2>
+                  <div id="experiencia-laboral">
                     <ul id="lista-experiencia"></ul>
                     <p> » 2020 - 2021: <span>Atencion al cliente en empresa estatal</span></p>
                     <p> » 2020 - Actualidad: <span>Diversos trabajos freelance en relaciones publicas</span></p>
@@ -49,8 +49,8 @@
                   </div>
                 </div>
                 <div class="title">
-                  <h2 id="estudios-realizados" onclick="toggleContent()"> ▶ Estudios Realizados</h2>
-                  <div class="content">
+                  <h2 class="content" onclick="toggleContent('estudios-realizados')"> ▶ Estudios Realizados</h2>
+                  <div id="estudios-realizados" >
                     <ul id="lista-estudios"></ul>
                     <p> » Primario<span> - completo</span></p>
                     <p> » Secundario<span> - completo</span></p>
@@ -62,8 +62,8 @@
                   </div>
                 </div>
                 <div class="title">
-                  <h2 id="capacidades" onclick="toggleContent()"> ▶ Mis capacidades</h2>
-                  <div class="content">
+                  <h2 class="content" onclick="toggleContent('capacidades')"> ▶ Mis capacidades</h2>
+                  <div id="capacidades">
                     <ul id="lista-capacidades"></ul>
                     <p> » Flexibilidad<span> - ★★★★★☆☆☆☆☆</span> (5/10)</p>
                     <p> » Administración<span> - ★★★★★★★★★☆</span> (9/10)</p>
@@ -74,31 +74,32 @@
                   </div>
                 </div>
                 <div class="title">
-                  <h2 id="video" onclick="toggleContent()"> ▶ Trabajos freelance</h2>
-                  <div class="content">
+                  <h2 class="content" onclick="toggleContent('trabajos-freelance')"> ▶ Trabajos freelance</h2>
+                  <div id="trabajos-freelance">
                     <ul id="video"></ul>
                     <p> » Videos o campañas donde participe</p>
+                    <span><i>Se pueden cerrar las secciones principales al apretar sobre los titulos</i></span>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/fOO6YNnpYZY" title="Empresa 1" frameborder="0" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dSHgRZGIznU" title="Empresa 2" frameborder="0" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/IyIjYuF_HUo" title="Empresa 3" frameborder="0" allowfullscreen></iframe>
                   </div>
-                <div class="titdle" id="condtacto">
-                  <h2 onclick="toggleContent()"> ▶ Contacto</h2>
-                  <div class="condtent">
+                <div class="title">
+                  <h2 class="content" onclick="toggleContent('contacto')"> ▶ Contacto</h2>
+                  <div id="contacto">
                     <form>
-                      <label for="nombre">Nombre:</label>
+                      <label for="nombre"> » Nombre:</label>
                       <input type="text" id="nombre" name="nombre" placeholder="Escriba aquí su nombre" required><br>
                 
-                      <label for="apellido">Apellido:</label><br>
+                      <label for="apellido"> » Apellido:</label>
                       <input type="text" id="apellido" name="apellido" placeholder="Escriba aquí su apellido" required><br>
                 
-                      <label for="email">Email:</label><br>
+                      <label for="email"> » Email:</label>
                       <input type="email" id="email" name="email" placeholder="Escriba aquí su mail" required><br>
                 
-                      <label for="asunto">Asunto:</label>
-                      <input type="text" id="asunto" name="asunto" placeholder="Escriba aquí el asunto del contacto" required><br>
+                      <label for="asunto"> » Asunto:</label>
+                      <input type="text" id="asunto" name="asunto" placeholder="Motivo de su contacto" required><br>
                 
-                      <label for="mensaje">Mensaje:</label>
+                      <label for="mensaje"> » Mensaje:</label>
                       <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Describa lo más detallado posible su mensaje" required></textarea>
                 
                       <input type="button" value="Enviar" onclick="enviarFormulario()">

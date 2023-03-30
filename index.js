@@ -52,14 +52,10 @@ window.onscroll = function() {
   prevScrollPos = currentScrollPos;
 };
 
-const content = document.getElementById("content");
-let isOpen = false;
-function toggleContent() {
-  content.style.display = isOpen ? "none" : "block";
-  isOpen = !isOpen;
+function toggleContent(contentId) {
+  const content = document.getElementById(contentId);
+  content.style.display = content.style.display === "block" ? "none" : "block";
 }
-content.addEventListener("mouseover", () => content.style.display = "block");
-content.addEventListener("click", toggleContent);
 
 function enviarFormulario() {
   const nombre = document.getElementById("nombre").value;

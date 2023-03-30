@@ -135,14 +135,14 @@ body {
   }
   
   .content input[type="submit"] {
-  background-color: #1f4068;
-  color: #fff;
+  background-color: #cb5bff;
+  color: #ffa7f8;
   cursor: pointer;
   transition: background-color 0.3s;
   }
   
   .content input[type="submit"]:hover {
-  background-color: #222;
+  background-color: #bc13ff;
   }
   
   .content label {
@@ -174,7 +174,7 @@ body {
   
   .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
   }
   
